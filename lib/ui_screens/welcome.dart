@@ -3,6 +3,8 @@ import 'package:weather/models/city.dart';
 import 'package:weather/models/constants.dart';
 import 'dart:ui';
 
+import 'home.dart';
+
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
 
@@ -79,9 +81,13 @@ class _WelcomeState extends State<Welcome> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: myConstants.secondaryColor,
-        child: Icon(Icons.pin_drop),
+        child: const Icon(Icons.pin_drop),
         onPressed: (){
-          print(selectedCities.length);
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder:
+                  (context)=> const Home()
+              )
+          );
         },
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather/models/constants.dart';
+import 'package:weather/ui_screens/home.dart';
 import 'package:weather/ui_screens/welcome.dart';
 
 class GetStarted extends StatefulWidget {
@@ -32,7 +33,7 @@ class _GetStartedState extends State<GetStarted> {
                 onTap: () {
                   Navigator.pushReplacement(context,
                       MaterialPageRoute(
-                          builder: (context)=> Welcome()));
+                          builder: (context)=> Home()));
                 },
                 child: Container(
                   height: 50,
